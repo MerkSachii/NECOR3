@@ -1,0 +1,40 @@
+int fa0/1.11
+ip helper-address 172.16.8.249
+exit
+int fa0/1.12
+ip helper-address 172.16.8.249
+exit
+int fa0/1.13
+ip helper-address 172.16.8.249
+exit
+int fa0/1.14
+ip helper-address 172.16.8.249
+exit
+int fa0/1.21
+ip helper-address 172.16.8.249
+exit
+int fa0/1.22
+ip helper-address 172.16.8.249
+exit
+
+
+ip dhcp excluded-address 172.16.8.156 172.16.8.158
+ip dhcp excluded-address 172.16.8.236 172.16.8.238
+ip dhcp excluded-address 172.16.8.188 172.16.8.190
+ip dhcp excluded-address 172.16.8.124 172.16.8.126
+ip dhcp excluded-address 172.16.8.220 172.16.8.222
+ip dhcp excluded-address 172.16.8.252 172.16.8.254
+
+no ip dhcp excluded-address 172.16.8.156 172.16.7.158
+no ip dhcp excluded-address 172.16.8.236 172.16.7.238
+no ip dhcp excluded-address 172.16.8.188 172.16.7.190
+no ip dhcp excluded-address 172.16.8.124 172.16.7.126
+no ip dhcp excluded-address 172.16.8.220 172.16.7.222
+no ip dhcp excluded-address 172.16.8.252 172.16.7.254
+
+no ip dhcp excluded-address 172.16.8.157 172.16.7.158
+no ip dhcp excluded-address 172.16.8.237 172.16.7.238
+no ip dhcp excluded-address 172.16.8.189 172.16.7.190
+no ip dhcp excluded-address 172.16.8.125 172.16.7.126
+no ip dhcp excluded-address 172.16.8.221 172.16.7.222
+no ip dhcp excluded-address 172.16.8.253 172.16.7.254
