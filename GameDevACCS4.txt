@@ -9,21 +9,21 @@ vlan 42
 name GameDes
 vlan 43
 name GameTest
-vlan 44
+vlan 32
 name GameDevWiFi
 int vlan 42
 int vlan 43
-int vlan 44
+int vlan 32
 !
 !
 !
 !
 interface FastEthernet0/1
-switchport trunk allowed vlan 42,43,44
+switchport trunk allowed vlan 32,42,43,44
 switchport mode trunk
 !
 interface FastEthernet0/2
-switchport trunk allowed vlan 42,43,44
+switchport trunk allowed vlan 32,42,43,44
 switchport mode trunk
 !
 interface FastEthernet0/3
@@ -153,7 +153,7 @@ spanning-tree portfast
 spanning-tree bpduguard enable
 !
 interface FastEthernet0/24
-switchport access vlan 44
+switchport access vlan 32
 switchport mode access
 spanning-tree portfast
 spanning-tree bpduguard enable

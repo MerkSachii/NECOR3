@@ -47,3 +47,5 @@ switchport mode trunk
 !
 interface GigabitEthernet0/2
 !
+spanning-tree vlan 31-32 root primary
+spanning-tree vlan 41-44 root secondary

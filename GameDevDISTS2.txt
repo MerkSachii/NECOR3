@@ -43,6 +43,9 @@ switchport trunk allowed vlan 31,32,41,42,43,44
 switchport mode trunk
 !
 interface GigabitEthernet0/1
+!
+spanning-tree vlan 31-32 root secondary
+spanning-tree vlan 41-44 root primary
 switchport mode trunk
 !
 interface GigabitEthernet0/2

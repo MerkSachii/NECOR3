@@ -7,18 +7,18 @@ spanning-tree mode rapid-pvst
 !
 vlan 41
 name GameArt
-vlan 44
+vlan 32
 name GameDevWiFi
 int vlan 41
-int vlan 44
+int vlan 32
 !
 !
 interface FastEthernet0/1
-switchport trunk allowed vlan 41,44
+switchport trunk allowed vlan 32,41,44
 switchport mode trunk
 !
 interface FastEthernet0/2
-switchport trunk allowed vlan 41,44
+switchport trunk allowed vlan 32,41,44
 switchport mode trunk
 !
 interface FastEthernet0/3
@@ -148,7 +148,7 @@ spanning-tree portfast
 spanning-tree bpduguard enable
 !
 interface FastEthernet0/24
-switchport access vlan 44
+switchport access vlan 32
 switchport mode access
 spanning-tree portfast
 spanning-tree bpduguard enable
