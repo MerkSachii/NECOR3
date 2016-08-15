@@ -19,8 +19,8 @@ int vlan 63
 !
 !
 spanning-tree mode pvst
-spanning-tree vlan 51 priority primary
-spanning-tree vlan 61-63 priority secondary
+spanning-tree vlan 51 root primary
+spanning-tree vlan 61-63 root secondary
 !
 interface FastEthernet0/1
 switchport mode trunk

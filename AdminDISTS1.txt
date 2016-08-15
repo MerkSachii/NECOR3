@@ -26,6 +26,9 @@ int vlan 22
 !
 spanning-tree mode rapid-pvst
 !
+spanning-tree vlan 11,12,13,14 root primary
+spanning-tree vlan 21-22 root secondary
+!
 interface Port-channel 1
 switchport trunk allowed vlan 21-22,91
 switchport trunk native vlan 99
