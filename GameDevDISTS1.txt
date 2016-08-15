@@ -29,18 +29,23 @@ spanning-tree mode rapid-pvst
 !
 interface FastEthernet0/1
 switchport trunk native vlan 99
+switchport trunk allowed vlan 31,32,91
 switchport mode trunk
 !
 interface FastEthernet0/2
 switchport trunk native vlan 99
+switchport trunk allowed vlan 31,32,91
 switchport mode trunk
 !
 interface FastEthernet0/3
 switchport trunk native vlan 99
+switchport trunk allowed vlan 41,42,43,32,91
 switchport mode trunk
 !
 interface FastEthernet0/4
 switchport trunk native vlan 99
+switchport trunk allowed vlan 41,42,43,32,91
+switchport trunk allowed vlan 31,32,91
 switchport mode trunk
 !
 !
@@ -52,6 +57,8 @@ switchport mode trunk
 !
 interface GigabitEthernet0/1
 switchport mode trunk
+switchport trunk native vlan 99
+switchport trunk allowed vlan 31,32,41,42,43,44,91
 !
 interface GigabitEthernet0/2
 !
