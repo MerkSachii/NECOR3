@@ -1,0 +1,89 @@
+hostname WebDevDISTS1
+!
+vlan 51
+name WebDev
+vlan 61
+name QATest
+vlan 62
+name GrpArt
+vlan 63
+name WebDevWiFi
+vlan 91
+name Management
+int vlan 91
+int vlan 51
+int vlan 61
+int vlan 62
+int vlan 63
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree vlan 51 priority primary
+spanning-tree vlan 61-63 priority secondary
+!
+interface FastEthernet0/1
+switchport mode trunk
+switchport trunk native vlan 99
+!
+interface FastEthernet0/2
+switchport mode trunk
+switchport trunk native vlan 99
+!
+interface FastEthernet0/3
+switchport mode trunk
+switchport trunk native vlan 99
+!
+interface FastEthernet0/4
+switchport mode trunk
+switchport trunk native vlan 99
+!
+interface FastEthernet0/5
+!
+interface FastEthernet0/6
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+switchport trunk allowed vlan 51,61-63,91
+switchport trunk native vlan 99
+switchport mode trunk
+!
+interface GigabitEthernet0/1
+switchport mode trunk
+switchport trunk native vlan 99
+!
+interface GigabitEthernet0/2
+!

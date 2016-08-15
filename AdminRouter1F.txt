@@ -1,0 +1,65 @@
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+no ip address
+duplex auto
+speed auto
+shutdown
+!
+interface FastEthernet0/1
+no ip address
+duplex auto
+speed auto
+!
+interface FastEthernet0/1.11
+encapsulation dot1Q 11
+ip address 172.16.8.158 255.255.255.224
+standby 11 ip 172.16.8.156
+standby 11 priority 105
+standby 11 preempt
+standby 11 track FastEthernet0/0
+standby preempt
+!
+interface FastEthernet0/1.12
+encapsulation dot1Q 12
+ip address 172.16.8.238 255.255.255.240
+standby 12 ip 172.16.8.236
+standby 12 priority 105
+standby 12 preempt
+standby 12 track FastEthernet0/0
+!
+interface FastEthernet0/1.13
+encapsulation dot1Q 13
+ip address 172.16.8.190 255.255.255.224
+standby 13 ip 172.16.8.188
+standby 13 priority 105
+standby 13 preempt
+standby 13 track FastEthernet0/0
+!
+interface FastEthernet0/1.14
+encapsulation dot1Q 14
+ip address 172.16.8.126 255.255.255.128
+standby 14 ip 172.16.8.124
+standby 14 priority 105
+standby 14 preempt
+standby 14 track FastEthernet0/0
+!
+interface FastEthernet0/1.21
+encapsulation dot1Q 21
+ip address 172.16.8.222 255.255.255.224
+standby 21 ip 172.16.8.220
+standby 21 preempt
+standby 21 track FastEthernet0/0
+!
+interface FastEthernet0/1.22
+encapsulation dot1Q 22
+ip address 172.16.8.254 255.255.255.240
+standby 22 ip 172.16.8.252
+standby 22 preempt
+standby 22 track FastEthernet0/0
+!
