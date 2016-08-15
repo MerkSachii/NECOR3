@@ -17,6 +17,50 @@ int fa0/1.22
 ip helper-address 172.16.8.249
 exit
 
+int fa0/1.31
+ip helper-address 172.16.9.33
+ip helper-address 172.16.9.34
+ip helper-address 172.16.8.253
+exit
+int fa0/1.32
+ip helper-address 172.16.9.33
+ip helper-address 172.16.9.34
+ip helper-address 172.16.8.253
+exit
+int fa0/1.41
+ip helper-address 172.16.9.33
+ip helper-address 172.16.9.34
+ip helper-address 172.16.8.253
+exit
+int fa0/1.42
+ip helper-address 172.16.9.33
+ip helper-address 172.16.9.34
+ip helper-address 172.16.8.253
+exit
+int fa0/1.43
+ip helper-address 172.16.9.33
+ip helper-address 172.16.9.34
+ip helper-address 172.16.8.253
+exit
+
+int fa0/1.31
+no ip helper-address 172.16.8.249
+exit
+int fa0/1.32
+no ip helper-address 172.16.8.249
+exit
+int fa0/1.41
+no ip helper-address 172.16.8.249
+exit
+int fa0/1.42
+no ip helper-address 172.16.8.249
+exit
+int fa0/1.43
+no ip helper-address 172.16.8.249
+exit
+
+
+
 
 ip dhcp excluded-address 172.16.8.156 172.16.8.158
 ip dhcp excluded-address 172.16.8.236 172.16.8.238
