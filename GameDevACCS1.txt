@@ -9,15 +9,10 @@ vlan 31
 name GameDev
 vlan 32
 name GameDevWiFi
-vlan 91
-name Management
 vlan 99
-name BlackHole
-int vlan 99
+vlan 91
 int vlan 31
 int vlan 32
-int vlan 91
-!
 !
 !
 !

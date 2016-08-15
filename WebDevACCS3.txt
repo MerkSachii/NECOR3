@@ -1,3 +1,5 @@
+en
+conf t
 hostname WebDevACCS3
 !
 !
@@ -7,6 +9,9 @@ vlan 63
 name WebDevWiFi
 vlan 91
 name Management
+vlan 99
+name BlackHole
+int vlan 99
 int vlan 91
 int vlan 61
 int vlan 63
@@ -239,6 +244,22 @@ switchport access vlan 63
 switchport mode access
 !
 interface GigabitEthernet0/1
+switchport access vlan 61
+switchport mode access
+switchport port-security
+switchport port-security maximum 2
+switchport port-security mac-address sticky 
+switchport port-security violation restrict 
+spanning-tree portfast
+spanning-tree bpduguard enable
 !
 interface GigabitEthernet0/2
+switchport access vlan 61
+switchport mode access
+switchport port-security
+switchport port-security maximum 2
+switchport port-security mac-address sticky 
+switchport port-security violation restrict 
+spanning-tree portfast
+spanning-tree bpduguard enable
 !

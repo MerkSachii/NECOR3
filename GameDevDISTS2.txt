@@ -15,8 +15,6 @@ vlan 91
 name Management
 vlan 99
 name BlackHole
-int vlan 99
-int vlan 91
 int vlan 31
 int vlan 32
 int vlan 41
@@ -32,8 +30,8 @@ hostname GameDevDISTS2
 !
 !
 spanning-tree mode rapid-pvst
-spanning-tree vlan 41-44 priority 24576
-spanning-tree vlan 31-32 priority 28672
+spanning-tree vlan 41-44 root primary
+spanning-tree vlan 31-32 root secondary
 !
 interface FastEthernet0/1
 switchport trunk native vlan 99

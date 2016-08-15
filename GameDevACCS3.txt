@@ -1,99 +1,4 @@
-configure terminal
-hostname GameDevACCS3
-!
-!
-spanning-tree mode rapid-pvst
-!
-!
-vlan 41
-name GameArt
-vlan 32
-name GameDevWiFi
-vlan 91
-name Management
-vlan 99
-name BlackHole
-int vlan 99
-int vlan 91
-int vlan 41
-int vlan 32
-!
-!
-interface FastEthernet0/1
-switchport trunk native vlan 99
-switchport trunk allowed vlan 32,41,91
-switchport mode trunk
-!
-interface FastEthernet0/2
-switchport trunk native vlan 99
-switchport trunk allowed vlan 32,41,91
-switchport mode trunk
-!
-interface FastEthernet0/3
-switchport access vlan 41
-switchport mode access
-switchport port-security
-switchport port-security maximum 2
-switchport port-security mac-address sticky 
-switchport port-security violation restrict 
-switchport port-security mac-address sticky 0060.3E27.BA37
-spanning-tree portfast
-spanning-tree bpduguard enable
-!
-interface FastEthernet0/4
-switchport access vlan 41
-switchport mode access
-switchport port-security
-switchport port-security maximum 2
-switchport port-security mac-address sticky 
-switchport port-security violation restrict 
-spanning-tree portfast
-spanning-tree bpduguard enable
-!
-interface FastEthernet0/5
-switchport access vlan 41
-switchport mode access
-switchport port-security
-switchport port-security maximum 2
-switchport port-security mac-address sticky 
-switchport port-security violation restrict 
-spanning-tree portfast
-spanning-tree bpduguard enable
-!
-interface FastEthernet0/6
-switchport access vlan 41
-switchport mode access
-switchport port-security
-switchport port-security maximum 2
-switchport port-security mac-address sticky 
-switchport port-security violation restrict 
-spanning-tree portfast
-spanning-tree bpduguard enable
-!
-interface FastEthernet0/7
-switchport access vlan 41
-switchport mode access
-switchport port-security
-switchport port-security maximum 2
-switchport port-security mac-address sticky 
-switchport port-security violation restrict 
-spanning-tree portfast
-spanning-tree bpduguard enable
-!
-interface FastEthernet0/8
-switchport access vlan 41
-switchport mode access
-switchport port-security
-switchport port-security maximum 2
-switchport port-security mac-address sticky 
-switchport port-security violation restrict 
-spanning-tree portfast
-spanning-tree bpduguard enable
-!
-interface FastEthernet0/9
-switchport access vlan 41
 
-GameDevACCS3#show run
 Building configuration...
 
 Current configuration : 7083 bytes
@@ -105,7 +10,14 @@ no service password-encryption
 !
 hostname GameDevACCS3
 !
-!
+vlan 32
+vlan 41
+vlan 91
+name Management
+vlan 99
+name BlackHole
+int vlan 32
+int vlan 41
 !
 !
 !
@@ -128,7 +40,6 @@ switchport port-security
 switchport port-security maximum 2
 switchport port-security mac-address sticky 
 switchport port-security violation restrict 
-switchport port-security mac-address sticky 0060.3E27.BA37
 spanning-tree portfast
 spanning-tree bpduguard enable
 !
