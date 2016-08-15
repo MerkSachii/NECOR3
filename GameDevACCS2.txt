@@ -11,6 +11,9 @@ vlan 32
 name GameDevWiFi
 vlan 91
 name Management
+vlan 99
+name BlackHole
+int vlan 99
 int vlan 91
 int vlan 31
 int vlan 32
@@ -21,13 +24,13 @@ int vlan 32
 spanning-tree mode rapid-pvst
 !
 interface FastEthernet0/1
-switchport trunk allowed vlan 31-32,91
 switchport trunk native vlan 99
+switchport trunk allowed vlan 31-32,91
 switchport mode trunk
 !
 interface FastEthernet0/2
-switchport trunk allowed vlan 31-32,91
 switchport trunk native vlan 99
+switchport trunk allowed vlan 31-32,91
 switchport mode trunk
 !
 interface FastEthernet0/3
@@ -37,6 +40,7 @@ switchport port-security
 switchport port-security maximum 2
 switchport port-security mac-address sticky 
 switchport port-security violation restrict 
+switchport port-security mac-address sticky 0010.1139.26CD
 spanning-tree portfast
 spanning-tree bpduguard enable
 !
