@@ -1,0 +1,51 @@
+configure terminal
+hostname GameDevDISTS1
+!
+!
+spanning-tree mode rapid-pvst
+!
+!
+vlan 31
+vlan 32
+vlan 41
+vlan 42
+vlan 43
+vlan 44
+int vlan 31
+int vlan 32
+int vlan 41
+int vlan 42
+int vlan 43
+int vlan 44
+!
+!
+!
+!
+!
+spanning-tree mode rapid-pvst
+!
+interface FastEthernet0/1
+switchport mode trunk
+!
+interface FastEthernet0/2
+switchport mode trunk
+!
+interface FastEthernet0/3
+switchport mode trunk
+!
+interface FastEthernet0/4
+switchport mode trunk
+!
+!
+!
+interface FastEthernet0/24
+switchport trunk allowed vlan 31,32,41,42,43,44
+switchport mode trunk
+!
+interface GigabitEthernet0/1
+switchport mode trunk
+!
+interface GigabitEthernet0/2
+!
+spanning-tree vlan 31-32 root primary
+spanning-tree vlan 41-44 root secondary

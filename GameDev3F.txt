@@ -1,0 +1,30 @@
+interface FastEthernet0/1.31
+encapsulation dot1Q 31
+ip address 172.16.1.253 255.255.255.0
+standby 31 ip 172.16.1.254
+standby 31 preempt
+!
+interface FastEthernet0/1.32
+encapsulation dot1Q 32
+ip address 172.16.0.253 255.255.255.0
+standby 32 ip 172.16.0.254
+standby 32 preempt
+!
+interface FastEthernet0/1.41
+encapsulation dot1Q 41
+ip address 172.16.2.61 255.255.255.192
+standby 41 ip 172.16.2.62
+standby 41 preempt
+!
+interface FastEthernet0/1.42
+encapsulation dot1Q 42
+ip address 172.16.2.93 255.255.255.224
+standby 42 ip 172.16.2.94
+standby 42 preempt
+!
+interface FastEthernet0/1.43
+encapsulation dot1Q 43
+ip address 172.16.2.125 255.255.255.224
+standby 43 ip 172.16.2.126
+standby 43 preempt
+!

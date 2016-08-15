@@ -1,0 +1,16 @@
+AdminDISTS1: {
+	Po1: Fa01 - Fa02
+	Po2: Fa05 - Fa06
+}
+
+AdminDISTS2: {
+	Po1: Fa01 - Fa02
+	Po3: Fa05 - Fa06	
+
+}
+
+AdminITACCS1: {
+	Po2: Fa01 - Fa02	
+	Po3: Fa03 - Fa04	
+
+}
