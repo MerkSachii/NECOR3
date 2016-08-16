@@ -1,4 +1,6 @@
-hostname WbDevACCS2
+enable
+conf t
+hostname WebDevACCS2
 !
 !
 !

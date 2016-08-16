@@ -1,3 +1,5 @@
+en
+conf t
 hostname AdminITACCS1
 !
 vlan 21
@@ -6,6 +8,9 @@ vlan 22
 name Servers
 vlan 91
 name Management
+vlan 99
+name BlackHole
+int vlan 99
 int vlan 91
 int vlan 21
 int vlan 22

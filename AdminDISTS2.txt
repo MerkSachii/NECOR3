@@ -15,6 +15,9 @@ vlan 22
 name Server
 vlan 91
 name Management
+vlan 99
+name BlackHole
+int vlan 99
 int vlan 91
 int vlan 11
 int vlan 12
@@ -72,41 +75,168 @@ switchport trunk native vlan 99
 switchport mode trunk
 channel-group 1 mode active
 !
+!
 interface FastEthernet0/7
+switchport access vlan 99
+switchport mode access
+switchport port-security maximum 2
+switchport port-security mac-address sticky 
+switchport port-security violation restrict 
+spanning-tree portfast
+shutdown
 !
 interface FastEthernet0/8
+switchport access vlan 99
+switchport mode access
+switchport port-security maximum 2
+switchport port-security mac-address sticky 
+switchport port-security violation restrict 
+spanning-tree portfast
+shutdown
 !
 interface FastEthernet0/9
+switchport access vlan 99
+switchport mode access
+switchport port-security maximum 2
+switchport port-security mac-address sticky 
+switchport port-security violation restrict 
+spanning-tree portfast
+shutdown
 !
 interface FastEthernet0/10
+switchport access vlan 99
+switchport mode access
+switchport port-security maximum 2
+switchport port-security mac-address sticky 
+switchport port-security violation restrict 
+spanning-tree portfast
+shutdown
 !
 interface FastEthernet0/11
+switchport access vlan 99
+switchport mode access
+switchport port-security maximum 2
+switchport port-security mac-address sticky 
+switchport port-security violation restrict 
+spanning-tree portfast
+shutdown
 !
 interface FastEthernet0/12
+switchport access vlan 99
+switchport mode access
+switchport port-security maximum 2
+switchport port-security mac-address sticky 
+switchport port-security violation restrict 
+spanning-tree portfast
+shutdown
 !
 interface FastEthernet0/13
+switchport access vlan 99
+switchport mode access
+switchport port-security maximum 2
+switchport port-security mac-address sticky 
+switchport port-security violation restrict 
+spanning-tree portfast
+shutdown
 !
 interface FastEthernet0/14
+switchport access vlan 99
+switchport mode access
+switchport port-security maximum 2
+switchport port-security mac-address sticky 
+switchport port-security violation restrict 
+spanning-tree portfast
+shutdown
 !
 interface FastEthernet0/15
+switchport access vlan 99
+switchport mode access
+switchport port-security maximum 2
+switchport port-security mac-address sticky 
+switchport port-security violation restrict 
+spanning-tree portfast
+shutdown
 !
 interface FastEthernet0/16
+switchport access vlan 99
+switchport mode access
+switchport port-security maximum 2
+switchport port-security mac-address sticky 
+switchport port-security violation restrict 
+spanning-tree portfast
+shutdown
 !
 interface FastEthernet0/17
+switchport access vlan 99
+switchport mode access
+switchport port-security maximum 2
+switchport port-security mac-address sticky 
+switchport port-security violation restrict 
+spanning-tree portfast
+shutdown
 !
 interface FastEthernet0/18
+switchport access vlan 99
+switchport mode access
+switchport port-security maximum 2
+switchport port-security mac-address sticky 
+switchport port-security violation restrict 
+spanning-tree portfast
+shutdown
 !
 interface FastEthernet0/19
+switchport access vlan 99
+switchport mode access
+switchport port-security maximum 2
+switchport port-security mac-address sticky 
+switchport port-security violation restrict 
+spanning-tree portfast
+shutdown
 !
 interface FastEthernet0/20
+switchport access vlan 99
+switchport mode access
+switchport port-security maximum 2
+switchport port-security mac-address sticky 
+switchport port-security violation restrict 
+spanning-tree portfast
+shutdown
 !
 interface FastEthernet0/21
+switchport access vlan 99
+switchport mode access
+switchport port-security maximum 2
+switchport port-security mac-address sticky 
+switchport port-security violation restrict 
+spanning-tree portfast
+shutdown
 !
 interface FastEthernet0/22
+switchport access vlan 99
+switchport mode access
+switchport port-security maximum 2
+switchport port-security mac-address sticky 
+switchport port-security violation restrict 
+spanning-tree portfast
+shutdown
 !
 interface FastEthernet0/23
+switchport access vlan 99
+switchport mode access
+switchport port-security maximum 2
+switchport port-security mac-address sticky 
+switchport port-security violation restrict 
+spanning-tree portfast
+shutdown
 !
 interface FastEthernet0/24
+switchport access vlan 99
+switchport mode access
+switchport port-security maximum 2
+switchport port-security mac-address sticky 
+switchport port-security violation restrict 
+spanning-tree portfast
+shutdown
 !
 interface GigabitEthernet0/1
 switchport mode trunk
@@ -114,4 +244,11 @@ switchport trunk allowed vlan 11-14,21-22,91
 switchport trunk native vlan 99
 !
 interface GigabitEthernet0/2
+switchport access vlan 99
+switchport mode access
+switchport port-security maximum 2
+switchport port-security mac-address sticky 
+switchport port-security violation restrict 
+spanning-tree portfast
+shutdown
 !

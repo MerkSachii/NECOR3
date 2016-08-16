@@ -1,4 +1,5 @@
-!
+en
+conf t
 hostname WebDevACCS1
 !
 !

@@ -7,6 +7,9 @@ vlan 14
 name Admin
 vlan 91
 name Management
+vlan 99
+name BlackHole
+int vlan 99
 int vlan 91
 int vlan 12
 int vlan 14
