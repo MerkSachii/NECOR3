@@ -45,13 +45,13 @@ interface FastEthernet0/1
 switchport trunk allowed vlan 11-14,21-22,91
 switchport trunk native vlan 99
 switchport mode trunk
-channel-group 5 mode active
+channel-group 5 mode desirable
 !
 interface FastEthernet0/2
 switchport trunk allowed vlan 11-14,21-22,91
 switchport trunk native vlan 99
 switchport mode trunk
-channel-group 5 mode active
+channel-group 5 mode desirable
 !
 interface FastEthernet0/3
 switchport trunk allowed vlan 11,13,91
@@ -67,13 +67,13 @@ interface FastEthernet0/5
 switchport trunk allowed vlan 21-22,91
 switchport trunk native vlan 99
 switchport mode trunk
-channel-group 1 mode active
+channel-group 1 mode desirable
 !
 interface FastEthernet0/6
 switchport trunk allowed vlan 21-22,91
 switchport trunk native vlan 99
 switchport mode trunk
-channel-group 1 mode active
+channel-group 1 mode desirable
 !
 !
 interface FastEthernet0/7

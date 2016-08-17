@@ -257,6 +257,19 @@ spanning-tree portfast
 spanning-tree bpduguard enable
 !
 interface GigabitEthernet0/1
+switchport access vlan 99
+switchport mode access
+switchport port-security maximum 2
+switchport port-security mac-address sticky 
+switchport port-security violation restrict 
+spanning-tree portfast
+shutdown
 !
 interface GigabitEthernet0/2
-!
+switchport access vlan 99
+switchport mode access
+switchport port-security maximum 2
+switchport port-security mac-address sticky 
+switchport port-security violation restrict 
+spanning-tree portfast
+shutdown

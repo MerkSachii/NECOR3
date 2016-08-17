@@ -1,13 +1,4 @@
 
-Building configuration...
-
-Current configuration : 7083 bytes
-!
-version 12.2
-no service timestamps log datetime msec
-no service timestamps debug datetime msec
-no service password-encryption
-!
 hostname GameDevACCS3
 !
 vlan 32
@@ -250,6 +241,22 @@ spanning-tree portfast
 spanning-tree bpduguard enable
 !
 interface GigabitEthernet0/1
+switchport access vlan 99
+switchport mode access
+switchport port-security maximum 2
+switchport port-security mac-address sticky 
+switchport port-security violation restrict 
+spanning-tree portfast
+shutdown
+
 !
 interface GigabitEthernet0/2
+switchport access vlan 99
+switchport mode access
+switchport port-security maximum 2
+switchport port-security mac-address sticky 
+switchport port-security violation restrict 
+spanning-tree portfast
+shutdown
+
 !

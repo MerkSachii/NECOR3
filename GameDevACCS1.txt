@@ -20,12 +20,12 @@ spanning-tree mode rapid-pvst
 !
 interface FastEthernet0/1
 switchport trunk native vlan 99
-switchport trunk allowed vlan 31-32
+switchport trunk allowed vlan 31-32,91
 switchport mode trunk
 !
 interface FastEthernet0/2
 switchport trunk native vlan 99
-switchport trunk allowed vlan 31-32
+switchport trunk allowed vlan 31-32,91
 switchport mode trunk
 !
 interface FastEthernet0/3
@@ -35,7 +35,6 @@ switchport port-security
 switchport port-security maximum 2
 switchport port-security mac-address sticky 
 switchport port-security violation restrict 
-switchport port-security mac-address sticky 0090.2161.D343
 spanning-tree portfast
 spanning-tree bpduguard enable
 !
@@ -46,7 +45,6 @@ switchport port-security
 switchport port-security maximum 2
 switchport port-security mac-address sticky 
 switchport port-security violation restrict 
-switchport port-security mac-address sticky 0060.477C.199D
 spanning-tree portfast
 spanning-tree bpduguard enable
 !
@@ -247,6 +245,20 @@ spanning-tree portfast
 spanning-tree bpduguard enable
 !
 interface GigabitEthernet0/1
+switchport access vlan 99
+switchport mode access
+switchport port-security maximum 2
+switchport port-security mac-address sticky 
+switchport port-security violation restrict 
+spanning-tree portfast
+shutdown
 !
 interface GigabitEthernet0/2
+switchport access vlan 99
+switchport mode access
+switchport port-security maximum 2
+switchport port-security mac-address sticky 
+switchport port-security violation restrict 
+spanning-tree portfast
+shutdown
 !
