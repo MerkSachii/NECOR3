@@ -1,0 +1,95 @@
+int fa0/0
+shut
+
+router ospf 1
+no router-idf
+
+network 172.16.0.0 0.0.3.255 area 2
+network 172.16.9.0 0.0.0.31 area 0
+
+router eigrp 100
+no auto-summary
+network 172.16.9.0 0.0.0.31
+
+
+
+
+network 172.16.4.0 0.0.3.255 area 3
+network 172.16.9.0 0.0.0.31 area 0
+
+network 172.16.8.0 0.0.0.255 area 1
+network 172.16.9.0 0.0.0.31 area 0
+
+network 172.16.8.0 0.0.0.127 
+network 172.16.8.128 0.0.0.31 
+network 172.16.8.160 0.0.0.31 
+network 172.16.8.192 0.0.0.31 
+network 172.16.8.224 0.0.0.15 
+network 172.16.8.240 0.0.0.15 
+
+network 172.16.1.0 0.0.0.255 
+network 172.16.0.0 0.0.0.255 
+network 172.16.2.0 0.0.0.63 
+network 172.16.2.64 0.0.0.31 
+network 172.16.2.96 0.0.0.31 
+network 172.16.9.0 0.0.0.31 
+
+int f0/0
+ip ospf 100 area 0
+
+no router ospf 100
+end
+clear ip ospf process
+y
+
+int fa0/0
+no ip ospf 100 area 1
+
+
+no network 172.16.8.0 0.0.0.127 area 1
+no network 172.16.8.128 0.0.0.31 area 1
+no network 172.16.8.160 0.0.0.31 area 1
+no network 172.16.8.192 0.0.0.31 area 1
+no network 172.16.8.224 0.0.0.15 area 1
+no network 172.16.8.240 0.0.0.15 area 1
+
+network 172.16.4.0 0.0.0.255
+network 172.16.5.0 0.0.0.255
+network 172.16.6.0 0.0.0.63
+network 172.16.6.64 0.0.0.63
+int fa0/1.11
+no ip ospf 100 area 1
+int fa0/1.12
+no ip ospf 100 area 1
+int fa0/1.13
+no ip ospf 100 area 1
+int fa0/1.14
+no ip ospf 100 area 1
+int fa0/1.21
+no ip ospf 100 area 1
+int fa0/1.22
+no ip ospf 100 area 1
+
+int fa0/1.11
+ip ospf 100 area 1
+int fa0/1.12
+ip ospf 100 area 1
+int fa0/1.13
+ip ospf 100 area 1
+int fa0/1.14
+ip ospf 100 area 1
+int fa0/1.21
+ip ospf 100 area 1
+int fa0/1.22
+ip ospf 100 area 1
+
+int fa0/1.31
+no ip ospf 100 area 2
+int fa0/1.32
+no ip ospf 100 area 2
+int fa0/1.41
+no ip ospf 100 area 2
+int fa0/1.42
+no ip ospf 100 area 2
+int fa0/1.43
+no ip ospf 100 area 2
