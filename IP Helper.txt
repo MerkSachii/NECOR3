@@ -17,3 +17,43 @@ ip dhcp excluded-address 172.16.5.250 172.16.5.254
 ip dhcp excluded-address 172.16.4.250 172.16.4.254
 ip dhcp excluded-address 172.16.6.58 172.16.6.62
 ip dhcp excluded-address 172.16.6.122 172.16.6.126
+
+int fa0/1.11	
+ip helper-address 172.16.8.249
+int fa0/1.12	
+ip helper-address 172.16.8.249
+int fa0/1.13	
+ip helper-address 172.16.8.249
+int fa0/1.14	
+ip helper-address 172.16.8.249
+int fa0/1.21	
+ip helper-address 172.16.8.249
+int fa0/1.22	
+ip helper-address 172.16.8.249
+
+no int fa0/1.11
+no int fa0/1.12
+no int fa0/1.13
+no int fa0/1.14
+no int fa0/1.21
+no int fa0/1.22
+
+int fa0/1.31	
+ip helper-address 172.16.8.249
+int fa0/1.32	
+ip helper-address 172.16.8.249
+int fa0/1.41	
+ip helper-address 172.16.8.249
+int fa0/1.42	
+ip helper-address 172.16.8.249
+int fa0/1.43	
+ip helper-address 172.16.8.249
+
+int fa0/1.51	
+ip helper-address 172.16.8.249
+int fa0/1.61	
+ip helper-address 172.16.8.249
+int fa0/1.62	
+ip helper-address 172.16.8.249
+int fa0/1.63	
+ip helper-address 172.16.8.249
