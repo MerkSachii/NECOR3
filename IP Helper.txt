@@ -17,6 +17,64 @@ int fa0/1.22
 ip helper-address 172.16.8.249
 exit
 
+int fa0/1.31
+ip helper-address 172.16.8.249
+exit
+int fa0/1.32
+ip helper-address 172.16.8.249
+exit
+int fa0/1.41
+ip helper-address 172.16.8.249
+exit
+int fa0/1.42
+ip helper-address 172.16.8.249
+exit
+int fa0/1.43
+ip helper-address 172.16.8.249
+exit
+
+int fa0/1.51
+ip helper-address 172.16.8.249
+exit
+int fa0/1.61
+ip helper-address 172.16.8.249
+exit
+int fa0/1.62
+ip helper-address 172.16.8.249
+exit
+int fa0/1.63
+ip helper-address 172.16.8.249
+exit
+
+conf t
+router eigrp 100
+passive-interface fastEthernet 0/1.11
+passive-interface fastEthernet 0/1.12
+passive-interface fastEthernet 0/1.13
+passive-interface fastEthernet 0/1.14
+passive-interface fastEthernet 0/1.21
+passive-interface fastEthernet 0/1.22
+
+
+conf t
+router eigrp 100
+passive-interface fastEthernet 0/1.31
+passive-interface fastEthernet 0/1.32
+passive-interface fastEthernet 0/1.41
+passive-interface fastEthernet 0/1.42
+passive-interface fastEthernet 0/1.43
+
+
+conf t
+router eigrp 100
+passive-interface fastEthernet 0/1.51
+passive-interface fastEthernet 0/1.61
+passive-interface fastEthernet 0/1.62
+passive-interface fastEthernet 0/1.63
+
+
+
+
 
 ip dhcp excluded-address 172.16.8.156 172.16.8.158
 ip dhcp excluded-address 172.16.8.236 172.16.8.238
