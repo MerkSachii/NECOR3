@@ -12,7 +12,6 @@ interface Port-channel 1
 switchport trunk native vlan 99
 switchport trunk allowed vlan 11-14,21-22,91
 switchport mode trunk
-shutdown
 !
 interface Port-channel 2
 switchport trunk native vlan 99
