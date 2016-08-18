@@ -1,98 +1,19 @@
-int fa0/1.11
-ip helper-address 172.16.8.249
-exit
-int fa0/1.12
-ip helper-address 172.16.8.249
-exit
-int fa0/1.13
-ip helper-address 172.16.8.249
-exit
-int fa0/1.14
-ip helper-address 172.16.8.249
-exit
-int fa0/1.21
-ip helper-address 172.16.8.249
-exit
-int fa0/1.22
-ip helper-address 172.16.8.249
-exit
-
-int fa0/1.31
-ip helper-address 172.16.8.249
-exit
-int fa0/1.32
-ip helper-address 172.16.8.249
-exit
-int fa0/1.41
-ip helper-address 172.16.8.249
-exit
-int fa0/1.42
-ip helper-address 172.16.8.249
-exit
-int fa0/1.43
-ip helper-address 172.16.8.249
-exit
-
-int fa0/1.51
-ip helper-address 172.16.8.249
-exit
-int fa0/1.61
-ip helper-address 172.16.8.249
-exit
-int fa0/1.62
-ip helper-address 172.16.8.249
-exit
-int fa0/1.63
-ip helper-address 172.16.8.249
-exit
-
-conf t
-router eigrp 100
-passive-interface fastEthernet 0/1.11
-passive-interface fastEthernet 0/1.12
-passive-interface fastEthernet 0/1.13
-passive-interface fastEthernet 0/1.14
-passive-interface fastEthernet 0/1.21
-passive-interface fastEthernet 0/1.22
 
 
-conf t
-router eigrp 100
-passive-interface fastEthernet 0/1.31
-passive-interface fastEthernet 0/1.32
-passive-interface fastEthernet 0/1.41
-passive-interface fastEthernet 0/1.42
-passive-interface fastEthernet 0/1.43
+ip dhcp excluded-address 172.16.8.152 172.16.8.156
+ip dhcp excluded-address 172.16.8.232 172.16.8.236
+ip dhcp excluded-address 172.16.8.184 172.16.8.188
+ip dhcp excluded-address 172.16.8.120 172.16.8.124
+ip dhcp excluded-address 172.16.8.216 172.16.8.220
+ip dhcp excluded-address 172.16.8.241 172.16.8.254
 
+ip dhcp excluded-address 172.16.1.250 172.16.1.254
+ip dhcp excluded-address 172.16.0.250 172.16.0.254
+ip dhcp excluded-address 172.16.2.58 172.16.2.62
+ip dhcp excluded-address 172.16.2.90 172.16.2.94
+ip dhcp excluded-address 172.16.2.122 172.16.2.126
 
-conf t
-router eigrp 100
-passive-interface fastEthernet 0/1.51
-passive-interface fastEthernet 0/1.61
-passive-interface fastEthernet 0/1.62
-passive-interface fastEthernet 0/1.63
-
-
-
-
-
-ip dhcp excluded-address 172.16.8.156 172.16.8.158
-ip dhcp excluded-address 172.16.8.236 172.16.8.238
-ip dhcp excluded-address 172.16.8.188 172.16.8.190
-ip dhcp excluded-address 172.16.8.124 172.16.8.126
-ip dhcp excluded-address 172.16.8.220 172.16.8.222
-ip dhcp excluded-address 172.16.8.252 172.16.8.254
-
-no ip dhcp excluded-address 172.16.8.156 172.16.7.158
-no ip dhcp excluded-address 172.16.8.236 172.16.7.238
-no ip dhcp excluded-address 172.16.8.188 172.16.7.190
-no ip dhcp excluded-address 172.16.8.124 172.16.7.126
-no ip dhcp excluded-address 172.16.8.220 172.16.7.222
-no ip dhcp excluded-address 172.16.8.252 172.16.7.254
-
-no ip dhcp excluded-address 172.16.8.157 172.16.7.158
-no ip dhcp excluded-address 172.16.8.237 172.16.7.238
-no ip dhcp excluded-address 172.16.8.189 172.16.7.190
-no ip dhcp excluded-address 172.16.8.125 172.16.7.126
-no ip dhcp excluded-address 172.16.8.221 172.16.7.222
-no ip dhcp excluded-address 172.16.8.253 172.16.7.254
+ip dhcp excluded-address 172.16.5.250 172.16.5.254
+ip dhcp excluded-address 172.16.4.250 172.16.4.254
+ip dhcp excluded-address 172.16.6.58 172.16.6.62
+ip dhcp excluded-address 172.16.6.122 172.16.6.126
