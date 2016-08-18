@@ -1,11 +1,9 @@
-hostname R1
-!accessing <UnitName>Router<num>
-enable secret accessing
+hostname GameDev3F
+enable secret thegamedevABR!_3f
 !
 !
 line con 0
-!<UnitName>Router<num>1234!
-password cisco
+password gamedevABR-Access!_3f
 login
 logging synchronous
 exec-timeout 30 0
@@ -13,8 +11,7 @@ exit
 !
 !
 line vty 0 4
-!<UnitName>Router<num>1234!
-password cisco
+password gamedevABR-Access!_3f
 login
 logging synchronous
 exec-timeout 30 0
@@ -22,8 +19,7 @@ exit
 !
 !
 line aux 0
-!<UnitName>Router<num>1234!
-password cisco
+password gamedevABR-Access!_3f
 login
 logging synchronous
 exec-timeout 30 0
@@ -41,8 +37,8 @@ no ip domain-lookup
 service password-encryption
 !
 !
-ip domain-name example.com
-username admin password cisco
+ip domain-name xcite.com
+username XciteAdmin password gamedevSSH123
 crypto key generate rsa
 1024
 ip ssh version 2

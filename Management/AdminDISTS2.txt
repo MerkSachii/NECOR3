@@ -1,0 +1,32 @@
+hostname AdminDISTS2
+!
+enable secret theadminDIST!_2f
+!
+!
+line con 0
+password adminDIST-Access!_2f
+login
+logging synchronous
+exec-timeout 30 0
+exit
+!
+!
+line vty 0 15
+password adminDIST-Access!_2f
+login
+logging synchronous
+exec-timeout 30 0
+exit
+!
+!
+banner motd $
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+UNAUTHORIZED ACCESS IS PROHIBITED
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+$
+!
+!
+no ip domain-lookup
+service password-encryption
+!
+!

@@ -1,0 +1,33 @@
+en
+conf t
+hostname WebDevACCS4
+enable secret thewebdevDIST!_6f
+!
+!
+line con 0
+password webdevACCS-Access!_6f
+login
+logging synchronous
+exec-timeout 30 0
+exit
+!
+!
+line vty 0 15
+password webdevACCS-Access!_6f
+login
+logging synchronous
+exec-timeout 30 0
+exit
+!
+!
+banner motd $
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+UNAUTHORIZED ACCESS IS PROHIBITED
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+$
+!
+!
+no ip domain-lookup
+service password-encryption
+!
+!

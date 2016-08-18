@@ -1,0 +1,34 @@
+en
+conf t
+hostname AdminITACCS1
+!
+enable secret theadminACCS!_2f
+!
+!
+line con 0
+password adminACCS-Access!_2f
+login
+logging synchronous
+exec-timeout 30 0
+exit
+!
+!
+line vty 0 15
+password adminACCS-Access!_2f
+login
+logging synchronous
+exec-timeout 30 0
+exit
+!
+!
+banner motd $
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+UNAUTHORIZED ACCESS IS PROHIBITED
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+$
+!
+!
+no ip domain-lookup
+service password-encryption
+!
+!

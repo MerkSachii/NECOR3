@@ -1,11 +1,11 @@
-hostname S3
-!accessing<UnitName>Switch<num>
-enable secret class
+en
+conf t
+hostname WebDevDISTS1
+enable secret thewebdevDIST!_5f
 !
 !
 line con 0
-!<UnitName>Switch<num>1234!
-password cisco
+password webdevDIST-Access!_5f
 login
 logging synchronous
 exec-timeout 30 0
@@ -13,8 +13,7 @@ exit
 !
 !
 line vty 0 15
-!<UnitName>Switch<num>1234!
-password cisco
+password webdevDIST-Access!_5f
 login
 logging synchronous
 exec-timeout 30 0

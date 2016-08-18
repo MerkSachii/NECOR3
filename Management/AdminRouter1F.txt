@@ -1,0 +1,47 @@
+hostname AdminRouter1F
+enable secret theadminABR!_1f
+!
+!
+line con 0
+password cisco
+login
+logging synchronous
+exec-timeout 30 0
+exit
+!
+!
+line vty 0 4
+password adminABR-Access!_1f
+login
+logging synchronous
+exec-timeout 30 0
+exit
+!
+!
+line aux 0
+password adminABR-Access!_1f
+login
+logging synchronous
+exec-timeout 30 0
+exit
+!
+!
+banner motd $
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+UNAUTHORIZED ACCESS IS PROHIBITED
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+$
+!
+!
+no ip domain-lookup
+service password-encryption
+!
+!
+ip domain-name xcite.com
+username XciteAdmin password adminSSH123
+crypto key generate rsa
+1024
+ip ssh version 2
+line vty 0 4
+login local
+transport input telnet ssh

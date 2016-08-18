@@ -1,0 +1,32 @@
+configure terminal
+hostname GameDevDISTS1
+enable secret thegamedevDIST!_3f
+!
+!
+line con 0
+password gamedevDIST-Access!_3f
+login
+logging synchronous
+exec-timeout 30 0
+exit
+!
+!
+line vty 0 15
+password gamedevDIST-Access!_3f
+login
+logging synchronous
+exec-timeout 30 0
+exit
+!
+!
+banner motd $
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+UNAUTHORIZED ACCESS IS PROHIBITED
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+$
+!
+!
+no ip domain-lookup
+service password-encryption
+!
+!
